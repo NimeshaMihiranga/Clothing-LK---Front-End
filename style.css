@@ -1,0 +1,144 @@
+body
+{
+  color: black;
+  background-color: rgb(255, 255, 255);
+  font-family: "Fredoka", sans-serif;
+  margin: 0;
+
+}
+
+h1
+{
+   font-family: "Fredoka", sans-serif;
+}
+
+/* header */
+.cloth
+{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+
+}
+
+@media (min-width : 600px)
+{
+  .cloth{
+    margin-left: 20px;
+  }
+}
+
+.logo
+{
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  aspect-ratio: 1/1;
+  align-items: center;
+  display: flex;
+  font-family: "Fredoka", sans-serif;
+}
+
+.navigation
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  
+}
+
+.navigation ul
+{
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+  margin-right: 10px;
+}
+
+.navigation li
+{
+  list-style: none;
+}
+
+
+.navi
+{
+  text-decoration: none;
+}
+
+@media (max-width : 600px)
+{
+  .navigation ul 
+  {
+    display: none;
+  }
+}
+
+@media (max-width : 600px)
+{
+  .name
+  {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Side Bar */
+/* 
+.sidebar
+{
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top:0px;
+  left: -250px;
+  background-color: #333;
+  padding-top: 60px;
+  transition: 0.5s ease;
+}
+
+.sidebar a
+{
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.sidebar a:hover
+{
+  color: #f1f1f1;
+  background-color: #575757;
+
+}
+
+.menu-btn
+{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+}
+
+.sidebar.active
+{
+  left: 0;
+} */
+
