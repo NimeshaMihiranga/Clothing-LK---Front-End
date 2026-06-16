@@ -47,11 +47,12 @@ h1
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(218, 212, 212, 0.7);
   position: fixed;
   top: 0;
   width: 100%;
   backdrop-filter: blur(10px);
+  z-index: 1;
   
 }
 
@@ -94,51 +95,94 @@ h1
 }
 
 /* Side Bar */
-/* 
-.sidebar
-{
-  height: 100%;
-  width: 250px;
+.sidebar {
+  background-color: rgba(218, 212, 212, 0.7);
+  backdrop-filter: blur(2px);
+  width: 300px;           
+  height: 100vh;         
   position: fixed;
-  top:0px;
-  left: -250px;
-  background-color: #333;
-  padding-top: 60px;
-  transition: 0.5s ease;
-}
-
-.sidebar a
-{
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #fff;
-  display: block;
-  transition: 0.5s ease;
-}
-
-.sidebar a:hover
-{
-  color: #f1f1f1;
-  background-color: #575757;
-
-}
-
-.menu-btn
-{
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 10px;
-  border: none;
-}
-
-.sidebar.active
-{
+  top: 0;
   left: 0;
-} */
+  padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  z-index: 0;
+}
 
+.sidebar ul {
+  display: flex;
+  flex-direction: column; 
+  gap: 130px;              
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-left: 100px;
+  
+
+}
+
+.sidebar li {
+  list-style: none;
+  padding: 10px;
+  transition: 0.7s ease;
+  align-items: center;
+  
+  
+}
+
+.sidebar li:hover
+{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.767) ;
+  padding: 10px;
+  border-radius: 5px;
+  transform: scale(1.1);
+  align-self: center;
+  transition: 0.7s ease;
+  
+}
+
+
+.sidebar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);         
+}
+
+#menu-btn
+{
+  border: none;
+  position: fixed;
+  z-index: 2;
+  background-color: transparent;
+  padding: 20px;
+  
+}
+
+@media (max-width: 600px) {
+    #menu-btn {
+        display: block;
+        
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+        transition: .9s ease;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        
+    }
+}
+
+@media (min-width : 600px){
+  .sidebar
+    {
+      display: none;
+    }
+  #menu-btn
+  {
+    display: none;
+  }
+}
